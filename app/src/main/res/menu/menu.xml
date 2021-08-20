@@ -7,25 +7,23 @@
     <item
             android:id="@+id/item_inicio"
 
-        android:icon="@drawable/ic_user_de_pie"
-            android:title="opcion 1"></item>
+        android:icon="@drawable/ic_agregar"
+            android:title="Agregar empleado"></item>
 
         <item
             android:id="@+id/item_cuenta"
-            android:icon="@drawable/ic_user_de_pie"
-            android:title="opcion 2"></item>
+            android:icon="@drawable/ic_editar"
+            android:title="Editar empleado"></item>
         <item
-            android:id="@+id/item_categorias"
+            android:id="@+id/item_informacion"
 
-            android:title="opcion 3" ></item>
+
+            android:title="Información empleados" ></item>
         <item
             android:id="@+id/item_configuracion"
+            android:icon="@drawable/ic_salir"
+            android:title="Cerrar sesión"
+            ></item>
 
-            android:title="opcion 4" ></item>
-    <item
-        android:id="@+id/media_route_menu_item"
-        android:title="Cast"
-        app:actionProviderClass="androidx.mediarouter.app.MediaRouteActionProvider"
-        tools:icon="@drawable/mr_button_light" />
 
 </menu>
