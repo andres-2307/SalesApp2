@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/color_recyclerview">
+
+        <ImageView
+
+            android:id="@+id/imagen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_azucar">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tex_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginLeft="1dp"
+                android:layout_toRightOf="@+id/layout"
+                android:text="Azúcar"
+                android:textColor="#040404"
+                android:textSize="20dp"
+                android:typeface="serif">
+
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tex_tipo"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/layout"
+                android:text="de caña"
+                android:textColor="#040404"
+                android:textSize="20dp"
+                android:typeface="serif" />
+
+
+            <LinearLayout
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tex_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_toRightOf="@+id/layout"
+                    android:text="ID 1003"
+                    android:textColor="#040404"
+                    android:textSize="15dp"
+                    android:typeface="serif" />
+
+
+                <TextView
+                    android:id="@+id/tex_precio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_toRightOf="@+id/layout"
+                    android:text="$ 5.000"
+                    android:textColor="#040404"
+                    android:textSize="15dp"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
