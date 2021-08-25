@@ -11,9 +11,11 @@
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable/ic_inventario.xml" value="0.2203125" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable/ic_product.xml" value="0.2203125" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable/ic_sales.xml" value="0.2203125" />
-        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_inicio.xml" value="0.25" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_inicio.xml" value="0.22" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/layout_menu.xml" value="0.25" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
