@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Buscar"
-                android:background="@drawable/corner_button" />
+                android:backgroundTint="@color/blue_clear"/>
 
 
             <androidx.recyclerview.widget.RecyclerView
