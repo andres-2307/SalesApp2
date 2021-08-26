@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Productos"></activity>
+        <activity android:name=".Venta"></activity>
+        <activity android:name=".Productos" />
         <activity
             android:name=".Main2Activity"
             android:exported="true"

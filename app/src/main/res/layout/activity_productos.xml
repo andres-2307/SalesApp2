@@ -55,9 +55,49 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/idrecycler"
                 android:layout_width="match_parent"
-                android:layout_height="295dp"
-                android:layout_marginTop="50dp"
-                >
+                android:layout_height="134dp"
+                android:layout_marginTop="50dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total:"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="5dp" />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Facturar"
+                    android:layout_marginLeft="200dp"
+                    android:background="@color/blue_clear"
+                    />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/idrecycler2"
+                android:layout_width="match_parent"
+                android:layout_height="183dp"
+                android:layout_marginTop="30dp">
+
+
 
             </androidx.recyclerview.widget.RecyclerView>
 
