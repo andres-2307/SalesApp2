@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@color/gray"
-    tools:openDrawer="start">
+  >
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -43,7 +43,7 @@
                 android:src="@drawable/ic_sales" />
 
             <TextView
-                android:id="@+id/id_producto"
+                android:id="@+id/id_venta"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center|right"
@@ -98,6 +98,7 @@
                 android:src="@drawable/ic_client" />
 
             <TextView
+                android:id="@+id/id_cliente"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center|right"
