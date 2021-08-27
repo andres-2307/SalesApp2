@@ -7,23 +7,23 @@
     tools:context=".Cliente"
     android:background="@color/white">
 
-
     <EditText
         android:id="@+id/nombre"
         android:layout_width="match_parent"
-        android:layout_height="39dp"
+        android:layout_height="48dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="96dp"
         android:autofillHints="@string/user"
         android:background="@drawable/corner_field"
         android:fontFamily="@font/nunito"
-        android:hint="  Nombre"
+        android:hint="@string/txt_nombre_c"
         android:inputType="text"
         android:textColor="@color/black"
         android:textColorHint="@color/gray_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/button"
@@ -32,52 +32,57 @@
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="348dp"
         android:background="@color/blue_clear"
-        android:text=" Agregar"
+        android:text="@string/btn_guardar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/N_telefono"
         android:layout_width="match_parent"
-        android:layout_height="39dp"
+        android:layout_height="48dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="256dp"
         android:autofillHints="@string/user"
         android:background="@drawable/corner_field"
         android:fontFamily="@font/nunito"
-        android:hint="  Telefono"
+        android:hint="@string/txt_telefono"
         android:inputType="number"
         android:textColor="@color/black"
         android:textColorHint="@color/gray_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/N_documento"
         android:layout_width="match_parent"
-        android:layout_height="39dp"
+        android:layout_height="48dp"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="180dp"
         android:autofillHints="@string/user"
         android:background="@drawable/corner_field"
         android:fontFamily="@font/nunito"
-        android:hint="  Documento"
+        android:hint="@string/hint_id_p"
+        android:inputType="number"
         android:textColor="@color/black"
         android:textColorHint="@color/gray_dark"
-        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
         android:layout_marginTop="36dp"
         android:gravity="center"
-        android:text="Agregar Cliente"
+        android:text="@string/add_c"
+        android:textSize="30sp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

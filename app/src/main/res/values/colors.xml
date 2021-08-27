@@ -13,6 +13,7 @@
     <color name="green_dark">#018600</color>
     <color name="green_clear">#70ce00</color>
     <color name="blue_dark">#2319db</color>
+    <color name="blue_dark2">#0489B1</color>
     <color name="blue_clear">#0aacfe</color>
     <color name="texto">#E3F5FD</color>
 </resources>

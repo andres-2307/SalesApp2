@@ -7,13 +7,31 @@
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable-v24/ic_arrow.xml" value="0.2203125" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable-v24/img_login.xml" value="0.2203125" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable/degrade_menu.xml" value="0.2203125" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable/ic_azucar.xml" value="0.2203125" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable/ic_client.xml" value="0.2203125" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable/ic_inventario.xml" value="0.2203125" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable/ic_mas.xml" value="0.2203125" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable/ic_papelera_de_reciclaje.xml" value="0.2203125" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable/ic_product.xml" value="0.2203125" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/drawable/ic_sales.xml" value="0.2203125" />
-        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_inicio.xml" value="0.22" />
-        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/font/nunito_bold.xml" value="0.234375" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/font/nunito_semi_bold.xml" value="0.234375" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_cliente.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_cliente_venta.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_inicio.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_inventario.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_productos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_productos2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_prueba_activity.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/activity_venta.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/agregados_recycler.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/alert_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/formato_lista.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/inventario_recycler.xml" value="0.22" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/layout_menu.xml" value="0.25" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/main_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/layout/productos_recycler.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/AndresFRivero/Documents/AndroidStudioProjects/SalesApp2/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
       </map>

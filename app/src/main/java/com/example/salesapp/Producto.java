@@ -6,16 +6,12 @@ public class Producto {
     private String nombre, precio, id,tipo;
     private int foto;
 
-
-
-
     public Producto(String nombre, String precio, String id, String tipo, int foto) {
         this.nombre = nombre;
         this.precio= precio;
         this.id=id;
         this.tipo=tipo;
         this.foto=foto;
-
     }
 
 
@@ -26,6 +22,7 @@ public class Producto {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public String getPrecio() {
         return precio;
     }
@@ -33,6 +30,7 @@ public class Producto {
     public void setPrecio(String precio) {
         this.precio = precio;
     }
+
     public String getId() {
         return id;
     }
@@ -48,6 +46,7 @@ public class Producto {
     public void setFoto(int foto) {
         this.foto = foto;
     }
+
     public String getTipo() {
         return tipo;
     }
@@ -55,5 +54,4 @@ public class Producto {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-
 }

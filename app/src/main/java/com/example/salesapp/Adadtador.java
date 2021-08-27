@@ -25,7 +25,7 @@ public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implem
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.formato_lista,null,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.formato_lista, null, false);
         view.setOnClickListener(this);
         return new ViewHolder(view);
     }
@@ -46,34 +46,27 @@ public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implem
         return datos.size();
     }
 
-public void setOnClickListener(View.OnClickListener listener){
-this.listener=listener;
-
-}
+    public void setOnClickListener(View.OnClickListener listener) {
+        this.listener = listener;
+    }
 
     @Override
     public void onClick(View v) {
-
-
-           listener.onClick(v);
-
-
+        listener.onClick(v);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView nombre,id,precio,tipo;
+        TextView nombre, id, precio, tipo;
         ImageView foto;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            nombre=(TextView)itemView.findViewById(R.id.tex_nombre);
-            id=(TextView)itemView.findViewById(R.id.tex_id);
-            precio=(TextView)itemView.findViewById(R.id.tex_precio);
-            tipo=(TextView)itemView.findViewById(R.id.tex_tipo);
-
-            foto=(ImageView) itemView.findViewById(R.id.imagen);
+            nombre = (TextView) itemView.findViewById(R.id.tex_nombre);
+            id = (TextView) itemView.findViewById(R.id.tex_id);
+            precio = (TextView) itemView.findViewById(R.id.tex_precio);
+            tipo = (TextView) itemView.findViewById(R.id.tex_tipo);
+            foto = (ImageView) itemView.findViewById(R.id.imagen);
         }
 
 

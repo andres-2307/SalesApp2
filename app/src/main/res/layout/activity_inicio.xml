@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="@color/gray"
-  >
+    tools:openDrawer="start">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -23,8 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-
 
         <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_ventas"
@@ -43,7 +41,7 @@
                 android:src="@drawable/ic_sales" />
 
             <TextView
-                android:id="@+id/id_venta"
+                android:id="@+id/id_producto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center|right"
@@ -98,7 +96,6 @@
                 android:src="@drawable/ic_client" />
 
             <TextView
-                android:id="@+id/id_cliente"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center|right"

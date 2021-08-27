@@ -54,12 +54,8 @@ public class Adaptador2 extends RecyclerView.Adapter<Adadtador.ViewHolder> imple
     @Override
     public void onClick(View v) {
 
-
         listener.onClick(v);
-
-
     }
-
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView nombre,id,precio,tipo;

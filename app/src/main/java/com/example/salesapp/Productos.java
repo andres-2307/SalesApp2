@@ -15,10 +15,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class Productos extends AppCompatActivity {
+
     ArrayList<Producto> datos;
     ArrayList<Producto> mostrar;
     ArrayList<Producto> venta;
     RecyclerView recycler,recycler2;
+
     private float precio;
 
     private Button but_buscar;
@@ -35,9 +37,6 @@ public class Productos extends AppCompatActivity {
         buscar=(EditText) findViewById(R.id.edit_buscar);
         costo=(TextView) findViewById(R.id.total);
 
-
-
-
         recycler=(RecyclerView) findViewById(R.id.idrecycler);
         recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
@@ -47,13 +46,8 @@ public class Productos extends AppCompatActivity {
 
         datos= new ArrayList<>();
 
-
-
-
         datos.add(0, new Producto("azucar", "$ 5.000", "ID 1003","de caña", R.drawable.ic_azucar));
         datos.add(1, new Producto("azucar", "$ 7.000", "ID 1004","de coco", R.drawable.ic_azucar));
-
-
 
         but_buscar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,19 +88,13 @@ public class Productos extends AppCompatActivity {
                                   ;
 
                                   costo.setText(mostrar.get(recycler.getChildAdapterPosition(v)).getPrecio());
-
                                 }
                             });
-
                         } else {
                             Toast.makeText(Productos.this, buscar.getText()+" NO SE ENCONTRO", Toast.LENGTH_SHORT).show();
-
                         }
                         i++;}
-
             }});
-
-
 
     }
 }
