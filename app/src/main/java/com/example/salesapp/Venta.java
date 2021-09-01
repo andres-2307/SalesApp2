@@ -30,9 +30,7 @@ public class Venta extends AppCompatActivity {
 
         productos = new ArrayList<>();
 
-        productos.add(new Producto("Azucar", "1.800", "0", "de caña", R.drawable.ic_azucar));
-        productos.add(new Producto("Carne", "10.000", "1", "Vaca", R.drawable.ic_carne));
-        productos.add(new Producto("Leche", "1.800", "2", "Vaca", R.drawable.ic_leche));
+
 
 
         AdapterProductos adapter = new AdapterProductos(productos);

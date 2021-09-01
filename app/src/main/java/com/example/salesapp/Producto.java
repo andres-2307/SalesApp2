@@ -3,15 +3,40 @@ package com.example.salesapp;
 public class Producto {
 
 
-    private String nombre, precio, id,tipo;
-    private int foto;
+    private String nombre;
 
-    public Producto(String nombre, String precio, String id, String tipo, int foto) {
-        this.nombre = nombre;
-        this.precio= precio;
+    private String precio;
+   private  String id;
+    private String cantidad;
+
+    public Producto(String id,String nombre,String cantidad,String precio) {
         this.id=id;
-        this.tipo=tipo;
-        this.foto=foto;
+        this.nombre = nombre;
+        this.cantidad=cantidad;
+        this.precio=precio;
+
+    }
+
+
+
+
+
+
+    public String getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(String cantidad) {
+        this.cantidad = cantidad;
+    }
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 
@@ -23,35 +48,13 @@ public class Producto {
         this.nombre = nombre;
     }
 
+
     public String getPrecio() {
-        return precio;
+        return  precio;
     }
 
     public void setPrecio(String precio) {
         this.precio = precio;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public int getFoto() {
-        return foto;
-    }
-
-    public void setFoto(int foto) {
-        this.foto = foto;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
 }

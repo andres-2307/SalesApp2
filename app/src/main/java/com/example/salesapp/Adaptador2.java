@@ -34,10 +34,7 @@ public class Adaptador2 extends RecyclerView.Adapter<Adadtador.ViewHolder> imple
     public void onBindViewHolder(@NonNull Adadtador.ViewHolder holder, int position) {
 
         holder.nombre.setText(datos.get(position).getNombre());
-        holder.id.setText(datos.get(position).getId());
-        holder.precio.setText(datos.get(position).getPrecio());
-        holder.tipo.setText(datos.get(position).getTipo());
-        holder.foto.setImageResource(datos.get(position).getFoto());
+
 
     }
 
@@ -67,9 +64,9 @@ public class Adaptador2 extends RecyclerView.Adapter<Adadtador.ViewHolder> imple
             nombre=(TextView)itemView.findViewById(R.id.tex_nombre);
             id=(TextView)itemView.findViewById(R.id.tex_id);
             precio=(TextView)itemView.findViewById(R.id.tex_precio);
-            tipo=(TextView)itemView.findViewById(R.id.tex_tipo);
+            tipo=(TextView)itemView.findViewById(R.id.tex_cantidad);
 
-            foto=(ImageView) itemView.findViewById(R.id.imagen);
+
         }
 
 

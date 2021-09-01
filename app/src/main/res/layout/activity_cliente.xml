@@ -8,7 +8,7 @@
     android:background="@color/white">
 
     <EditText
-        android:id="@+id/nombre"
+        android:id="@+id/edit_nombre_cliente"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginHorizontal="30dp"
@@ -26,7 +26,7 @@
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/guardar_cliente"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="30dp"
@@ -39,7 +39,7 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/N_telefono"
+        android:id="@+id/edit_telefono"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginHorizontal="30dp"
@@ -57,7 +57,7 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/N_documento"
+        android:id="@+id/edit_documento"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginHorizontal="30dp"

@@ -102,7 +102,7 @@
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <Button
-        android:id="@+id/btn_next"
+        android:id="@+id/guardar_producto"
         android:layout_width="360dp"
         android:layout_height="60dp"
         android:layout_marginHorizontal="25dp"

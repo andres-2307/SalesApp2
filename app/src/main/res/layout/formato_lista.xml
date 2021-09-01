@@ -16,16 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
 
-            android:id="@+id/imagen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_azucar">
-
-        </ImageView>
 
         <LinearLayout
             android:layout_width="340dp"
@@ -36,7 +27,7 @@
                 android:id="@+id/tex_nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
-                android:layout_marginLeft="1dp"
+                android:layout_marginLeft="30dp"
                 android:layout_toRightOf="@+id/layout"
                 android:text="Azúcar"
                 android:textColor="#040404"
@@ -47,12 +38,12 @@
             </TextView>
 
             <TextView
-                android:id="@+id/tex_tipo"
+                android:id="@+id/tex_cantidad"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@+id/layout"
-                android:text="de caña"
+                android:text="cantidad"
                 android:textColor="#040404"
                 android:textSize="20dp"
                 android:typeface="serif" />

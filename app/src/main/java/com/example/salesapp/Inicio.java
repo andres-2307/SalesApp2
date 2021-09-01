@@ -21,7 +21,7 @@ public class Inicio extends AppCompatActivity {
 
         btnProducto.setOnClickListener(v -> startActivity(new Intent(Inicio.this, Productos2.class)));
 
-        btnVenta.setOnClickListener(v -> startActivity(new Intent(Inicio.this, Venta.class)));
+        btnVenta.setOnClickListener(v -> startActivity(new Intent(Inicio.this, Productos.class)));
 
         btnCliente.setOnClickListener(v -> startActivity(new Intent(Inicio.this, Cliente.class)));
 

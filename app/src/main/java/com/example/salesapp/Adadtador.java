@@ -36,8 +36,9 @@ public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implem
         holder.nombre.setText(datos.get(position).getNombre());
         holder.id.setText(datos.get(position).getId());
         holder.precio.setText(datos.get(position).getPrecio());
-        holder.tipo.setText(datos.get(position).getTipo());
-        holder.foto.setImageResource(datos.get(position).getFoto());
+        holder.cantidad.setText(datos.get(position).getCantidad());
+
+
 
     }
 
@@ -57,7 +58,7 @@ public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implem
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView nombre, id, precio, tipo;
+        TextView nombre, id, precio, cantidad;
         ImageView foto;
 
         public ViewHolder(@NonNull View itemView) {
@@ -65,8 +66,8 @@ public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implem
             nombre = (TextView) itemView.findViewById(R.id.tex_nombre);
             id = (TextView) itemView.findViewById(R.id.tex_id);
             precio = (TextView) itemView.findViewById(R.id.tex_precio);
-            tipo = (TextView) itemView.findViewById(R.id.tex_tipo);
-            foto = (ImageView) itemView.findViewById(R.id.imagen);
+            cantidad = (TextView) itemView.findViewById(R.id.tex_cantidad);
+
         }
 
 
