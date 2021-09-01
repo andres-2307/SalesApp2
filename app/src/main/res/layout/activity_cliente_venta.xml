@@ -31,7 +31,7 @@
         android:autofillHints="@string/user"
         android:background="@drawable/corner_field"
         android:fontFamily="@font/nunito"
-        android:hint="@string/hint_id"
+        android:hint="@string/hint_id_p"
         android:inputType="number"
         android:textColor="@color/black"
         android:textColorHint="@color/gray_dark"
