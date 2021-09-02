@@ -31,8 +31,6 @@ public class Venta extends AppCompatActivity {
         productos = new ArrayList<>();
 
 
-
-
         AdapterProductos adapter = new AdapterProductos(productos);
         recyclerViewProductos.setAdapter(adapter);
 

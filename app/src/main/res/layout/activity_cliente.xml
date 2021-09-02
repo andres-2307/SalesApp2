@@ -7,93 +7,6 @@
     tools:context=".Cliente"
     android:background="@color/white">
 
-    <EditText
-
-        android:id="@+id/edit_nombre_cliente"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="96dp"
-        android:autofillHints="@string/user"
-        android:background="@drawable/corner_field"
-        android:fontFamily="@font/nunito"
-        android:hint="@string/hint_id_p"
-        android:inputType="number"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/nombre"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="156dp"
-        android:autofillHints="@string/user"
-        android:background="@drawable/corner_field"
-        android:fontFamily="@font/nunito"
-        android:hint="@string/txt_nombre_c"
-        android:inputType="text"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
-
-    <Button
-        android:id="@+id/guardar_cliente"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="304dp"
-        android:background="@color/blue_clear"
-        android:text="@string/btn_guardar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/edit_telefono"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="220dp"
-        android:autofillHints="@string/user"
-        android:background="@drawable/corner_field"
-        android:fontFamily="@font/nunito"
-        android:hint="@string/txt_telefono"
-        android:inputType="number"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
-
-
-    <EditText
-        android:id="@+id/edit_documento"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="180dp"
-        android:autofillHints="@string/user"
-        android:background="@drawable/corner_field"
-        android:fontFamily="@font/nunito"
-        android:hint="@string/hint_id_p"
-        android:inputType="number"
-        android:textColor="@color/black"
-        android:textColorHint="@color/gray_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
@@ -107,6 +20,73 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/edit_documento"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints="@string/user"
+        android:background="@drawable/corner_field"
+        android:fontFamily="@font/nunito"
+        android:hint="@string/hint_id_p"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/edit_nombre_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints="@string/user"
+        android:background="@drawable/corner_field"
+        android:fontFamily="@font/nunito"
+        android:hint="@string/txt_nombre_c"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_documento"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/edit_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints="@string/user"
+        android:background="@drawable/corner_field"
+        android:fontFamily="@font/nunito"
+        android:hint="@string/txt_telefono"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nombre_cliente"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/guardar_cliente"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/blue_clear"
+        android:text="@string/btn_guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_telefono"
+        tools:ignore="TextContrastCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

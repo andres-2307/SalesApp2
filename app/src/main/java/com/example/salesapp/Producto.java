@@ -2,11 +2,9 @@ package com.example.salesapp;
 
 public class Producto {
 
-
     private String nombre;
-
     private String precio;
-   private  String id;
+    private  String id;
     private String cantidad;
 
     public Producto(String id,String nombre,String cantidad,String precio) {
@@ -14,13 +12,7 @@ public class Producto {
         this.nombre = nombre;
         this.cantidad=cantidad;
         this.precio=precio;
-
     }
-
-
-
-
-
 
     public String getCantidad() {
         return cantidad;

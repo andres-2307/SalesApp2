@@ -40,21 +40,16 @@ public class Productos2 extends AppCompatActivity {
                 int CANTIDAD= Integer.parseInt(cantidad.getText().toString());
                 float PRECIO= Float.parseFloat( precio.getText().toString());
 
-
                 Map<String, Object> DatosProducto = new HashMap<>();
                 DatosProducto.put("id",ID);
                 DatosProducto.put("nombre",NOMBRE);
-                DatosProducto.put("cantidad","cantidad: "+CANTIDAD);
+                DatosProducto.put("cantidad", CANTIDAD);
                 DatosProducto.put("precio",PRECIO);
-
 
                 mRootReference.child("producto").push().setValue(DatosProducto);
 
-
             }
         });
-
-
 
     }
 }
