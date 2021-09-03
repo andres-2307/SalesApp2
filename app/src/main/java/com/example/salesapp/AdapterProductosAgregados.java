@@ -13,10 +13,10 @@ import java.util.ArrayList;
 
 public class AdapterProductosAgregados extends RecyclerView.Adapter<AdapterProductosAgregados.ViewHolder> implements View.OnClickListener{
 
-    private ArrayList<Producto> productos;
+    private ArrayList<HolderProducto> productos;
     private View.OnClickListener listener;
 
-    public AdapterProductosAgregados(ArrayList<Producto> productos){
+    public AdapterProductosAgregados(ArrayList<HolderProducto> productos){
         this.productos = productos;
     }
 

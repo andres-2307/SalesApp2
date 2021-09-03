@@ -14,10 +14,10 @@ import java.util.ArrayList;
 public class Adaptador2 extends RecyclerView.Adapter<Adadtador.ViewHolder> implements View.OnClickListener {
 
 
-    ArrayList<Producto> datos;
+    ArrayList<HolderProducto> datos;
     private View.OnClickListener listener;
 
-    public Adaptador2(ArrayList<Producto> dato) {
+    public Adaptador2(ArrayList<HolderProducto> dato) {
         this.datos = dato;
     }
 
@@ -32,10 +32,7 @@ public class Adaptador2 extends RecyclerView.Adapter<Adadtador.ViewHolder> imple
 
     @Override
     public void onBindViewHolder(@NonNull Adadtador.ViewHolder holder, int position) {
-
         holder.nombre.setText(datos.get(position).getNombre());
-
-
     }
 
     @Override
@@ -45,14 +42,10 @@ public class Adaptador2 extends RecyclerView.Adapter<Adadtador.ViewHolder> imple
 
     public void setOnClickListener(View.OnClickListener listener){
         this.listener=listener;
-
     }
 
     @Override
-    public void onClick(View v) {
-
-        listener.onClick(v);
-    }
+    public void onClick(View v) { listener.onClick(v); }
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView nombre,id,precio,tipo;
@@ -65,11 +58,7 @@ public class Adaptador2 extends RecyclerView.Adapter<Adadtador.ViewHolder> imple
             id=(TextView)itemView.findViewById(R.id.tex_id);
             precio=(TextView)itemView.findViewById(R.id.tex_precio);
             tipo=(TextView)itemView.findViewById(R.id.tex_cantidad);
-
-
         }
-
-
     }
 
 }

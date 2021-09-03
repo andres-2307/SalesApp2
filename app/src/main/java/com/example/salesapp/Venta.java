@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class Venta extends AppCompatActivity {
 
-    private ArrayList<Producto> productos;
+    private ArrayList<HolderProducto> productos;
     private RecyclerView recyclerViewProductos;
     private Button siguiente;
 
@@ -27,9 +27,7 @@ public class Venta extends AppCompatActivity {
         recyclerViewProductos = findViewById(R.id.recycler);
         recyclerViewProductos.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-
         productos = new ArrayList<>();
-
 
         AdapterProductos adapter = new AdapterProductos(productos);
         recyclerViewProductos.setAdapter(adapter);

@@ -5,13 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,17 +25,10 @@ public class Productos extends AppCompatActivity {
 
     private DatabaseReference mReference;
 
-    ArrayList<Producto> datos;
-    ArrayList<Producto> mostrar;
-    ArrayList<Producto> venta;
+    ArrayList<HolderProducto> datos;
+    ArrayList<HolderProducto> mostrar;
+    ArrayList<HolderProducto> venta;
     RecyclerView recycler,recycler2;
-
-    private float precio;
-
-    private Button but_buscar;
-    private  TextView costo;
-
-    private EditText buscar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +37,9 @@ public class Productos extends AppCompatActivity {
 
         mReference= FirebaseDatabase.getInstance().getReference();
 
-        but_buscar =(Button)findViewById(R.id.but_buscar);
-        buscar=(EditText) findViewById(R.id.edit_buscar);
-        costo=(TextView) findViewById(R.id.total);
+        Button but_buscar = findViewById(R.id.but_buscar);
+        EditText buscar= findViewById(R.id.edit_buscar);
+        TextView costo=(TextView) findViewById(R.id.total);
 
         recycler=(RecyclerView) findViewById(R.id.idrecycler);
         recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
@@ -57,72 +48,47 @@ public class Productos extends AppCompatActivity {
         recycler2=(RecyclerView) findViewById(R.id.idrecycler2);
         recycler2.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-
-          ver();
-
-
+        ver();
 
         but_buscar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-
-            }
+            public void onClick(View v) {}
         });
-
     }
 
     public void ver(){
-        datos= new ArrayList<>();
+        datos = new ArrayList<>();
 
         mReference.child("producto").addValueEventListener(new ValueEventListener() {
             @Override
-            public  void  onDataChange ( DataSnapshot  dataSnapshot ) {
+            public void onDataChange(DataSnapshot dataSnapshot) {
 
-                for ( final DataSnapshot Snapshot: dataSnapshot.getChildren()){
+                for(final DataSnapshot Snapshot: dataSnapshot.getChildren()){
 
                     mReference.child("producto").child(Snapshot.getKey()).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
 
-                            HolderProducto hol=Snapshot.getValue(HolderProducto.class);
+                            HolderProducto hol = Snapshot.getValue(HolderProducto.class);
 
-                            String nombre=hol.getNombre();
-                            String id= String.valueOf(hol.getId());
-                            String precio=String.valueOf(hol.getPrecio());
-                            String cantidad=String.valueOf(hol.getCantidad());
+                            String nombre = hol.getNombre();
+                            int id = hol.getId();
+                            float precio = hol.getPrecio();
+                            int cantidad = hol.getCantidad();
 
-
-
-                            datos.add(new Producto(id,nombre,cantidad,precio));
+                            datos.add(new HolderProducto(id,nombre,cantidad,precio));
                             Adadtador adapta = new Adadtador(datos);
                             recycler.setAdapter(adapta);
-
-
-
-
                         }
 
                         @Override
-                        public void onCancelled(@NonNull @NotNull DatabaseError error) {
-
-                        }
+                        public void onCancelled(@NonNull @NotNull DatabaseError error) {}
                     });
-
-
-
                 }
-
-
             }
 
             @Override
-            public  void  onCancelled ( DatabaseError  databaseError ) {
-
-            }
+            public  void  onCancelled ( DatabaseError  databaseError ) {}
         });
-
     }
-
-
 }

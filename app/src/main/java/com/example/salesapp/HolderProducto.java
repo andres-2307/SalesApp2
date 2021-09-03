@@ -7,7 +7,13 @@ public class HolderProducto {
     private int id;
     private int cantidad;
 
-    public HolderProducto() {
+    public HolderProducto() {}
+
+    public HolderProducto(int id, String nombre, int cantidad, float precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.id = id;
+        this.cantidad = cantidad;
     }
 
     public int getCantidad() {
@@ -37,12 +43,11 @@ public class HolderProducto {
     }
 
 
-    public Float getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Float precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
-
 }

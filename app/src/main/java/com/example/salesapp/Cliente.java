@@ -1,6 +1,5 @@
 package com.example.salesapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,11 +14,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Cliente extends AppCompatActivity {
+
     private DatabaseReference mRootReference;
-
-
-    private EditText nombre,id,telefono;
-    private Button guardar_cliente;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,32 +24,26 @@ public class Cliente extends AppCompatActivity {
 
         mRootReference = FirebaseDatabase.getInstance().getReference();
 
-        nombre =(EditText)findViewById(R.id.edit_nombre_cliente);
-        id =(EditText)findViewById(R.id.edit_documento);
-        telefono =(EditText)findViewById(R.id.edit_telefono);
-        guardar_cliente =(Button) findViewById(R.id.guardar_cliente);
-
-
+        EditText nombre_field = findViewById(R.id.edit_nombre_cliente);
+        EditText id_field = findViewById(R.id.edit_documento);
+        EditText telefono_field = findViewById(R.id.edit_telefono);
+        Button guardar_cliente = findViewById(R.id.guardar_cliente);
 
         guardar_cliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                int ID= Integer.parseInt( id.getText().toString());
-                String NOMBRE= nombre.getText().toString();
-                String TELEFONO= telefono.getText().toString();
-
+                int id = Integer.parseInt( id_field.getText().toString());
+                String nombre = nombre_field.getText().toString();
+                String telefono = telefono_field.getText().toString();
 
                 Map<String, Object> DatosCliente = new HashMap<>();
-                DatosCliente.put("id",ID);
-                DatosCliente.put("nombre",NOMBRE);
-                DatosCliente.put("telefono",TELEFONO);
+                DatosCliente.put("id", id);
+                DatosCliente.put("nombre", nombre);
+                DatosCliente.put("telefono", telefono);
 
                 mRootReference.child("clientes").push().setValue(DatosCliente);
-
-
             }
         });
-
     }
 }

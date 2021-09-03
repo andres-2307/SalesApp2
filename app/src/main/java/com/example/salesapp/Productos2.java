@@ -14,9 +14,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Productos2 extends AppCompatActivity {
+
     private DatabaseReference mRootReference;
-    private EditText id,nombre,cantidad,precio;
-    private Button guardar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,32 +24,31 @@ public class Productos2 extends AppCompatActivity {
 
         mRootReference = FirebaseDatabase.getInstance().getReference();
 
-        id =(EditText)findViewById(R.id.id_producto);
-        nombre =(EditText)findViewById(R.id.nombre_producto);
-        cantidad =(EditText)findViewById(R.id.cantidad_producto);
-        precio=(EditText)findViewById(R.id.precio_producto);
-        guardar=(Button) findViewById(R.id.guardar_producto);
+        EditText id_field = findViewById(R.id.id_producto);
+        EditText nombre_field = findViewById(R.id.nombre_producto);
+        EditText cantidad_field = findViewById(R.id.cantidad_producto);
+        EditText precio_field = findViewById(R.id.precio_producto);
+        Button guardar = findViewById(R.id.guardar_producto);
 
 
         guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                int ID= Integer.parseInt( id.getText().toString());
-                String NOMBRE= nombre.getText().toString();
-                int CANTIDAD= Integer.parseInt(cantidad.getText().toString());
-                float PRECIO= Float.parseFloat( precio.getText().toString());
+                int id = Integer.parseInt(id_field.getText().toString());
+                String nombre = nombre_field.getText().toString();
+                int cantidad = Integer.parseInt(cantidad_field.getText().toString());
+                float precio = Float.parseFloat( precio_field.getText().toString());
 
                 Map<String, Object> DatosProducto = new HashMap<>();
-                DatosProducto.put("id",ID);
-                DatosProducto.put("nombre",NOMBRE);
-                DatosProducto.put("cantidad", CANTIDAD);
-                DatosProducto.put("precio",PRECIO);
+                DatosProducto.put("id", id);
+                DatosProducto.put("nombre", nombre);
+                DatosProducto.put("cantidad", cantidad);
+                DatosProducto.put("precio", precio);
 
                 mRootReference.child("producto").push().setValue(DatosProducto);
 
             }
         });
-
     }
 }
