@@ -14,11 +14,11 @@ import java.util.ArrayList;
 public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implements View.OnClickListener {
 
 
-    ArrayList<HolderProducto> datos;
+    ArrayList<HolderProducto> dato;
     private View.OnClickListener listener;
 
     public Adadtador(ArrayList<HolderProducto> dato) {
-        this.datos = dato;
+        this.dato = dato;
     }
 
     @NonNull
@@ -33,16 +33,16 @@ public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implem
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.nombre.setText(datos.get(position).getNombre());
-        holder.id.setText(String.valueOf(datos.get(position).getId()));
-        holder.precio.setText(String.valueOf(datos.get(position).getPrecio()));
-        holder.cantidad.setText(String.valueOf(datos.get(position).getCantidad()));
+        holder.nombre.setText(dato.get(position).getNombre());
+        holder.id.setText(String.valueOf(dato.get(position).getId()));
+        holder.precio.setText(String.valueOf(dato.get(position).getPrecio()));
+        holder.cantidad.setText(String.valueOf(dato.get(position).getCantidad()));
 
     }
 
     @Override
     public int getItemCount() {
-        return datos.size();
+        return dato.size();
     }
 
     public void setOnClickListener(View.OnClickListener listener) {

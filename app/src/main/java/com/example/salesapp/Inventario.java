@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -27,6 +28,7 @@ public class Inventario extends AppCompatActivity {
 
     ArrayList<HolderProducto> datos;
     private RecyclerView recycler;
+    Adadtador adapta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class Inventario extends AppCompatActivity {
         ver();
 
         btn_regresar.setOnClickListener(e -> startActivity(new Intent(Inventario.this, Inicio.class)));
+
     }
 
     public void ver(){
@@ -66,8 +69,19 @@ public class Inventario extends AppCompatActivity {
                             int cantidad = hol.getCantidad();
 
                             datos.add(new HolderProducto(id,nombre,cantidad,precio));
-                            Adadtador adapta = new Adadtador(datos);
+                             adapta = new Adadtador(datos);
                             recycler.setAdapter(adapta);
+
+                            adapta.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+
+                                    datos.remove(recycler.getChildAdapterPosition(v));
+
+                                    adapta.notifyDataSetChanged();
+
+                                }
+                            });
                         }
 
                         @Override
@@ -79,5 +93,11 @@ public class Inventario extends AppCompatActivity {
             @Override
             public  void  onCancelled ( DatabaseError  databaseError ) {}
         });
+
+
+
+
     }
+
+
 }

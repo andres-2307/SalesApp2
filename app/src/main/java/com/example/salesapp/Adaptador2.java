@@ -65,6 +65,8 @@ public class Adaptador2 extends RecyclerView.Adapter<Adadtador.ViewHolder> imple
             id=(TextView)itemView.findViewById(R.id.tex_id);
             precio=(TextView)itemView.findViewById(R.id.tex_precio);
 
+
+
         }
     }
 

@@ -36,6 +36,7 @@ public class Productos extends AppCompatActivity {
     Adaptador2 adapta2;
     float suma;
 
+
     RecyclerView recycler,recycler2;
 
     @Override
@@ -60,7 +61,10 @@ public class Productos extends AppCompatActivity {
         datos = new ArrayList<>();
         venta = new ArrayList<>();
         mostrar = new ArrayList<>();
+
         ver();
+
+
 
 
 
@@ -88,6 +92,7 @@ public class Productos extends AppCompatActivity {
                             datos.add(new HolderProducto(id,nombre,cantidad,precio));
                             adapta = new Adadtador(datos);
                             recycler.setAdapter(adapta);
+                            costo.setText(String.valueOf(suma));
 
                             but_buscar.setOnClickListener(new View.OnClickListener() {
 
@@ -102,11 +107,11 @@ public class Productos extends AppCompatActivity {
 
                                             mostrar.add(new HolderProducto(dat.getId(),dat.getNombre(), dat.getCantidad(), dat.getPrecio()));
 
-                                             adapta = new Adadtador(mostrar);
+                                            adapta = new Adadtador(mostrar);
                                             recycler.setAdapter(adapta);
-                                            }
+                                        }
 
-                                    i++;}
+                                        i++;}
 
 
                                     adapta.setOnClickListener(new View.OnClickListener() {
@@ -123,6 +128,19 @@ public class Productos extends AppCompatActivity {
                                             costo.setText(String.valueOf(suma));
                                             adapta2 = new Adaptador2(venta);
                                             recycler2.setAdapter(adapta2);
+
+                                            adapta2.setOnClickListener(new View.OnClickListener() {
+                                                @Override
+                                                public void onClick(View v) {
+
+                                                    suma= suma-venta.get(recycler2.getChildAdapterPosition(v)).getPrecio();
+                                                    costo.setText(String.valueOf(suma));
+                                                    venta.remove(recycler2.getChildAdapterPosition(v));
+                                                    adapta2.notifyDataSetChanged();
+
+                                                }
+                                            });
+
                                         }
                                     });
                                 }
@@ -141,19 +159,22 @@ public class Productos extends AppCompatActivity {
 
                                     suma= suma+datos.get(recycler.getChildAdapterPosition(v)).getPrecio();
                                     costo.setText(String.valueOf(suma));
-                                     adapta2 = new Adaptador2(venta);
+                                    adapta2 = new Adaptador2(venta);
                                     recycler2.setAdapter(adapta2);
 
                                     adapta2.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            datos.remove(recycler2.getChildAdapterPosition(v));
 
-                                            adapta2.notifyItemChanged(recycler2.getChildAdapterPosition(v));
 
+                                            suma= suma-venta.get(recycler2.getChildAdapterPosition(v)).getPrecio();
+                                            costo.setText(String.valueOf(suma));
+                                            venta.remove(recycler2.getChildAdapterPosition(v));
+                                            adapta2.notifyDataSetChanged();
 
                                         }
                                     });
+
 
 
 
@@ -171,7 +192,12 @@ public class Productos extends AppCompatActivity {
             @Override
             public  void  onCancelled ( DatabaseError  databaseError ) {}
         });
+
+
+
     }
+
+
 
 
 }
