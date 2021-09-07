@@ -18,9 +18,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="30dp" />
+
 
 
             <EditText
@@ -57,8 +55,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/idrecycler"
                 android:layout_width="match_parent"
-                android:layout_height="134dp"
-                android:layout_marginTop="50dp">
+                android:layout_height="180dp"
+                android:layout_marginTop="5dp">
 
             </androidx.recyclerview.widget.RecyclerView>
 
@@ -66,7 +64,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp">
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
@@ -79,14 +78,14 @@
                     android:id="@+id/total"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:textColor="#2E8532"
                     android:layout_marginLeft="5dp" />
 
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="200dp"
+                    android:layout_marginLeft="150dp"
                     android:background="@color/blue_clear"
                     android:text="Facturar"
                     tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />

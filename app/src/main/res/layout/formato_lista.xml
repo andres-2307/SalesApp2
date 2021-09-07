@@ -7,7 +7,7 @@
     android:background="@color/white">
 
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="420dp"
         android:layout_height="53dp"
         android:background="@drawable/color_recyclerview"
@@ -17,25 +17,33 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-
         <LinearLayout
-            android:layout_width="340dp"
+            android:layout_width="434dp"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tex_nombre"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_marginLeft="30dp"
-                android:layout_toRightOf="@+id/layout"
-                android:text="Azúcar"
-                android:textColor="#040404"
-                android:textSize="20dp"
-                android:typeface="serif">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tex_nombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/layout"
+                    android:text="Azúcar"
+                    android:textColor="#040404"
+                    android:textSize="20dp"
+                    android:typeface="serif">
 
 
-            </TextView>
+                </TextView>
+
+            </LinearLayout>
+
+
 
             <TextView
                 android:id="@+id/tex_cantidad"
@@ -43,7 +51,7 @@
                 android:layout_height="36dp"
                 android:layout_marginLeft="5dp"
                 android:layout_toRightOf="@+id/layout"
-                android:text="cantidad"
+
                 android:textColor="#040404"
                 android:textSize="20dp"
                 android:typeface="serif" />
@@ -55,35 +63,72 @@
                 android:layout_marginLeft="100dp"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tex_id"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="1dp"
-                    android:layout_toRightOf="@+id/layout"
-                    android:text="ID 1003"
-                    android:textColor="#040404"
-                    android:textSize="15dp"
-                    android:typeface="serif" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_toRightOf="@+id/layout"
+                        android:text="ID:"
+                        android:textColor="#FD0505"
+                        android:textSize="15dp"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/tex_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_toRightOf="@+id/layout"
+                        android:text="001"
+                        android:textColor="#040404"
+                        android:textSize="15dp"
+                        android:typeface="serif" />
+
+                </LinearLayout>
 
 
-                <TextView
-                    android:id="@+id/tex_precio"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="1dp"
-                    android:layout_toRightOf="@+id/layout"
-                    android:text="$ 5.000"
-                    android:textColor="#040404"
-                    android:textSize="15dp"
-                    android:typeface="serif" />
+                <LinearLayout
+                    android:layout_width="206dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_toRightOf="@+id/layout"
+                        android:text="$"
+                        android:textColor="#167516"
+                        android:textSize="20dp"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/tex_precio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_toRightOf="@+id/layout"
+                        android:text="5.000"
+                        android:textColor="#040404"
+                        android:textSize="20dp"
+                        android:typeface="serif" />
+
+                </LinearLayout>
+
 
             </LinearLayout>
 
 
         </LinearLayout>
 
-    </LinearLayout>
+    </FrameLayout>
 
 
 

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,6 +29,13 @@ public class Productos extends AppCompatActivity {
     ArrayList<HolderProducto> datos;
     ArrayList<HolderProducto> mostrar;
     ArrayList<HolderProducto> venta;
+    private TextView costo;
+    private EditText buscar;
+    private Button  but_buscar;
+    Adadtador adapta;
+    Adaptador2 adapta2;
+    float suma;
+
     RecyclerView recycler,recycler2;
 
     @Override
@@ -37,9 +45,9 @@ public class Productos extends AppCompatActivity {
 
         mReference= FirebaseDatabase.getInstance().getReference();
 
-        Button but_buscar = findViewById(R.id.but_buscar);
-        EditText buscar= findViewById(R.id.edit_buscar);
-        TextView costo=(TextView) findViewById(R.id.total);
+        but_buscar = findViewById(R.id.but_buscar);
+         buscar= findViewById(R.id.edit_buscar);
+         costo=(TextView) findViewById(R.id.total);
 
         recycler=(RecyclerView) findViewById(R.id.idrecycler);
         recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
@@ -48,16 +56,17 @@ public class Productos extends AppCompatActivity {
         recycler2=(RecyclerView) findViewById(R.id.idrecycler2);
         recycler2.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
+
+        datos = new ArrayList<>();
+        venta = new ArrayList<>();
+        mostrar = new ArrayList<>();
         ver();
 
-        but_buscar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {}
-        });
+
+
     }
 
     public void ver(){
-        datos = new ArrayList<>();
 
         mReference.child("producto").addValueEventListener(new ValueEventListener() {
             @Override
@@ -77,8 +86,80 @@ public class Productos extends AppCompatActivity {
                             int cantidad = hol.getCantidad();
 
                             datos.add(new HolderProducto(id,nombre,cantidad,precio));
-                            Adadtador adapta = new Adadtador(datos);
+                            adapta = new Adadtador(datos);
                             recycler.setAdapter(adapta);
+
+                            but_buscar.setOnClickListener(new View.OnClickListener() {
+
+                                @Override
+                                public void onClick(View v) {
+                                    mostrar = new ArrayList<>();
+                                    int i;
+                                    for (i=0;i<datos.size();) {
+                                        HolderProducto dat = datos.get(i);
+
+                                        if (dat.getNombre().equals(buscar.getText().toString())) {
+
+                                            mostrar.add(new HolderProducto(dat.getId(),dat.getNombre(), dat.getCantidad(), dat.getPrecio()));
+
+                                             adapta = new Adadtador(mostrar);
+                                            recycler.setAdapter(adapta);
+                                            }
+
+                                    i++;}
+
+
+                                    adapta.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+
+
+                                            venta.add(new HolderProducto(mostrar.get(recycler.getChildAdapterPosition(v)).getId(),
+                                                    mostrar.get(recycler.getChildAdapterPosition(v)).getNombre(),
+                                                    mostrar.get(recycler.getChildAdapterPosition(v)).getCantidad(),
+                                                    mostrar.get(recycler.getChildAdapterPosition(v)).getPrecio()));
+
+                                            suma= suma+datos.get(recycler.getChildAdapterPosition(v)).getPrecio();
+                                            costo.setText(String.valueOf(suma));
+                                            adapta2 = new Adaptador2(venta);
+                                            recycler2.setAdapter(adapta2);
+                                        }
+                                    });
+                                }
+                            });
+
+
+                            adapta.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+
+
+                                    venta.add(new HolderProducto(datos.get(recycler.getChildAdapterPosition(v)).getId(),
+                                            datos.get(recycler.getChildAdapterPosition(v)).getNombre(),
+                                            datos.get(recycler.getChildAdapterPosition(v)).getCantidad(),
+                                            datos.get(recycler.getChildAdapterPosition(v)).getPrecio()));
+
+                                    suma= suma+datos.get(recycler.getChildAdapterPosition(v)).getPrecio();
+                                    costo.setText(String.valueOf(suma));
+                                     adapta2 = new Adaptador2(venta);
+                                    recycler2.setAdapter(adapta2);
+
+                                    adapta2.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            datos.remove(recycler2.getChildAdapterPosition(v));
+
+                                            adapta2.notifyItemChanged(recycler2.getChildAdapterPosition(v));
+
+
+                                        }
+                                    });
+
+
+
+                                }
+                            });
+
                         }
 
                         @Override
@@ -91,4 +172,6 @@ public class Productos extends AppCompatActivity {
             public  void  onCancelled ( DatabaseError  databaseError ) {}
         });
     }
+
+
 }

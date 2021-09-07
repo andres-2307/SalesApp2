@@ -54,6 +54,9 @@ public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implem
         listener.onClick(v);
     }
 
+
+
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView nombre, id, precio, cantidad;
