@@ -11,7 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -60,28 +62,30 @@ public class Inventario extends AppCompatActivity {
                     mReference.child("producto").child(Snapshot.getKey()).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                                HolderProducto hol = Snapshot.getValue(HolderProducto.class);
 
-                            HolderProducto hol = Snapshot.getValue(HolderProducto.class);
+                                String nombre = hol.getNombre();
+                                int id = hol.getId();
+                                float precio = hol.getPrecio();
+                                int cantidad = hol.getCantidad();
 
-                            String nombre = hol.getNombre();
-                            int id = hol.getId();
-                            float precio = hol.getPrecio();
-                            int cantidad = hol.getCantidad();
+                                datos.add(new HolderProducto(id, nombre, cantidad, precio));
+                                adapta = new Adadtador(datos);
+                                recycler.setAdapter(adapta);
 
-                            datos.add(new HolderProducto(id,nombre,cantidad,precio));
-                             adapta = new Adadtador(datos);
-                            recycler.setAdapter(adapta);
-
-                            adapta.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-
-                                    datos.remove(recycler.getChildAdapterPosition(v));
-
-                                    adapta.notifyDataSetChanged();
-
-                                }
-                            });
+                                adapta.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        datos.remove(recycler.getChildAdapterPosition(v));
+                                        /*mReference.child("producto").child(Snapshot.getKey()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                            @Override
+                                            public void onSuccess(Void unused) {
+                                                Toast.makeText(Inventario.this, "El producto se ha eliminado", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });*/
+                                        adapta.notifyDataSetChanged();
+                                    }
+                                });
                         }
 
                         @Override
@@ -94,10 +98,6 @@ public class Inventario extends AppCompatActivity {
             public  void  onCancelled ( DatabaseError  databaseError ) {}
         });
 
-
-
-
     }
-
 
 }

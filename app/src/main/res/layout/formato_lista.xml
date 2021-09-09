@@ -9,7 +9,7 @@
 
     <FrameLayout
         android:layout_width="420dp"
-        android:layout_height="53dp"
+        android:layout_height="65dp"
         android:background="@drawable/color_recyclerview"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,7 +18,7 @@
 
 
         <LinearLayout
-            android:layout_width="434dp"
+            android:layout_width="415dp"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
@@ -31,30 +31,26 @@
                     android:id="@+id/tex_nombre"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
+                    android:fontFamily="@font/nunito"
+                    android:layout_marginStart="30dp"
+                    android:layout_toRightOf="@+id/layout"
+                    android:text="@string/name"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/tex_cantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:fontFamily="@font/nunito"
                     android:layout_marginLeft="30dp"
                     android:layout_toRightOf="@+id/layout"
-                    android:text="Azúcar"
-                    android:textColor="#040404"
-                    android:textSize="20dp"
-                    android:typeface="serif">
-
-
-                </TextView>
+                    android:text="@string/hint_p_cantidad"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:typeface="serif" />
 
             </LinearLayout>
-
-
-
-            <TextView
-                android:id="@+id/tex_cantidad"
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@+id/layout"
-
-                android:textColor="#040404"
-                android:textSize="20dp"
-                android:typeface="serif" />
 
 
             <LinearLayout
@@ -69,25 +65,27 @@
                     android:orientation="horizontal">
 
                     <TextView
-
                         android:layout_width="30dp"
                         android:layout_height="match_parent"
+                        android:fontFamily="@font/nunito"
                         android:layout_marginLeft="1dp"
                         android:layout_toRightOf="@+id/layout"
                         android:text="ID:"
-                        android:textColor="#FD0505"
-                        android:textSize="15dp"
-                        android:typeface="monospace" />
+                        android:textColor="@color/red"
+                        android:textSize="15sp"
+                        android:typeface="monospace"
+                        tools:ignore="TextContrastCheck" />
 
                     <TextView
                         android:id="@+id/tex_id"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:fontFamily="@font/nunito"
                         android:layout_marginLeft="1dp"
                         android:layout_toRightOf="@+id/layout"
-                        android:text="001"
+                        android:text="@string/rellenoid"
                         android:textColor="#040404"
-                        android:textSize="15dp"
+                        android:textSize="15sp"
                         android:typeface="serif" />
 
                 </LinearLayout>
@@ -99,38 +97,34 @@
                     android:orientation="horizontal">
 
                     <TextView
-
                         android:layout_width="10dp"
                         android:layout_height="match_parent"
+                        android:fontFamily="@font/nunito"
                         android:layout_marginLeft="1dp"
                         android:layout_toRightOf="@+id/layout"
-                        android:text="$"
-                        android:textColor="#167516"
-                        android:textSize="20dp"
+                        android:text="@string/relleno_pre2"
+                        android:textColor="@color/green_dark"
+                        android:textSize="20sp"
                         android:typeface="monospace" />
 
                     <TextView
                         android:id="@+id/tex_precio"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:fontFamily="@font/nunito"
                         android:layout_marginLeft="1dp"
                         android:layout_toRightOf="@+id/layout"
-                        android:text="5.000"
+                        android:text="@string/relleno_precio"
                         android:textColor="#040404"
-                        android:textSize="20dp"
+                        android:textSize="20sp"
                         android:typeface="serif" />
 
                 </LinearLayout>
 
-
             </LinearLayout>
-
 
         </LinearLayout>
 
     </FrameLayout>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,38 +1,77 @@
 package com.example.salesapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+public class Venta {
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+    private String nombre, nombre_cliente, id_cliente;
+    private float valor_unitario, valor_total;
+    private int cantidad, id;
 
-import java.util.ArrayList;
+    public Venta(int id, String nombre, String nombre_cliente, String id_cliente, float valor_unitario, float valor_total, int cantidad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.nombre_cliente = nombre_cliente;
+        this.id_cliente = id_cliente;
+        this.valor_unitario = valor_unitario;
+        this.valor_total = valor_total;
+        this.cantidad = cantidad;
+    }
 
-public class Venta extends AppCompatActivity {
+    public Venta() {
+    }
 
-    private ArrayList<HolderProducto> productos;
-    private RecyclerView recyclerViewProductos;
-    private Button siguiente;
+    public int getId() {
+        return id;
+    }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_venta);
+    public void setId(int id) {
+        this.id = id;
+    }
 
-        siguiente = findViewById(R.id.btn_next);
+    public String getNombre() {
+        return nombre;
+    }
 
-        recyclerViewProductos = findViewById(R.id.recycler);
-        recyclerViewProductos.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-        productos = new ArrayList<>();
+    public int getCantidad() {
+        return cantidad;
+    }
 
-        AdapterProductos adapter = new AdapterProductos(productos);
-        recyclerViewProductos.setAdapter(adapter);
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
 
-        siguiente.setOnClickListener(v -> startActivity(new Intent(Venta.this, Cliente_Venta.class)));
+    public float getValor_unitario() {
+        return valor_unitario;
+    }
 
+    public void setValor_unitario(float valor_unitario) {
+        this.valor_unitario = valor_unitario;
+    }
+
+    public float getValor_total() {
+        return valor_total;
+    }
+
+    public void setValor_total(float valor_total) {
+        this.valor_total = valor_total;
+    }
+
+    public String getNombre_cliente() {
+        return nombre_cliente;
+    }
+
+    public void setNombre_cliente(String nombre_cliente) {
+        this.nombre_cliente = nombre_cliente;
+    }
+
+    public String getId_cliente() {
+        return id_cliente;
+    }
+
+    public void setId_cliente(String id_cliente) {
+        this.id_cliente = id_cliente;
     }
 }

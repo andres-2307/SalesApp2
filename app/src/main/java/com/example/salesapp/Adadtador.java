@@ -13,7 +13,6 @@ import java.util.ArrayList;
 
 public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implements View.OnClickListener {
 
-
     ArrayList<HolderProducto> dato;
     private View.OnClickListener listener;
 
@@ -37,7 +36,6 @@ public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implem
         holder.id.setText(String.valueOf(dato.get(position).getId()));
         holder.precio.setText(String.valueOf(dato.get(position).getPrecio()));
         holder.cantidad.setText(String.valueOf(dato.get(position).getCantidad()));
-
     }
 
     @Override
@@ -51,11 +49,8 @@ public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implem
 
     @Override
     public void onClick(View v) {
-        listener.onClick(v);
+        this.listener.onClick(v);
     }
-
-
-
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
@@ -70,8 +65,5 @@ public class Adadtador extends RecyclerView.Adapter<Adadtador.ViewHolder> implem
             cantidad = (TextView) itemView.findViewById(R.id.tex_cantidad);
 
         }
-
-
     }
-
 }
